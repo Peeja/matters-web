@@ -350,7 +350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^16.9.1":
   version: 16.9.1
   resolution: "@types/node@npm:16.9.1"
   checksum: 41afcf183a22d59323a0199dd7e0f46591247f45fc08a4434edb26d56dc279ae4fdb80f37989ddd7a0f45e3857c4933e6e82057ede09c5a829f77e373e680375
@@ -2928,6 +2928,7 @@ fsevents@~2.3.1:
   resolution: "matters-web@workspace:."
   dependencies:
     "@types/eslint": ^7
+    "@types/node": ^16.9.1
     "@types/prettier": ^2
     "@types/react": 17.0.20
     "@typescript-eslint/eslint-plugin": ^4.31.0

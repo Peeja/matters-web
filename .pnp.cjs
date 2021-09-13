@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/eslint", "npm:7.28.0"],
+            ["@types/node", "npm:16.9.1"],
             ["@types/prettier", "npm:2.3.2"],
             ["@types/react", "npm:17.0.20"],
             ["@typescript-eslint/eslint-plugin", "virtual:588f80602a2c9d4d1e4e5fa47e839a8f10976ebce876c626157399118ef2303bb40db7236f1bfb021f5287eec1a018cd394e4d664c93abc4a7e9c072ac6e580d#npm:4.31.0"],
@@ -3570,6 +3571,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["matters-web", "workspace:."],
             ["@types/eslint", "npm:7.28.0"],
+            ["@types/node", "npm:16.9.1"],
             ["@types/prettier", "npm:2.3.2"],
             ["@types/react", "npm:17.0.20"],
             ["@typescript-eslint/eslint-plugin", "virtual:588f80602a2c9d4d1e4e5fa47e839a8f10976ebce876c626157399118ef2303bb40db7236f1bfb021f5287eec1a018cd394e4d664c93abc4a7e9c072ac6e580d#npm:4.31.0"],
