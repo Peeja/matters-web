@@ -1,3 +1,4 @@
+import useMeld from "../hooks/useMeld";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 
@@ -7,7 +8,8 @@ const ReactJson = dynamic(() => import("react-json-view"), {
 });
 
 const Home: NextPage = () => {
-  return <ReactJson src={{ abc: 123 }} />;
+  const allData = useMeld();
+  return allData ? <ReactJson src={allData} /> : <>…</>;
 };
 
 export default Home;
