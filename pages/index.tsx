@@ -1,4 +1,4 @@
-import useMeld from "../hooks/useMeld";
+import { useRead } from "../hooks/useRead";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 
@@ -7,8 +7,13 @@ const ReactJson = dynamic(() => import("react-json-view"), {
   ssr: false,
 });
 
+const QUERY = {
+  "@describe": "?id",
+  "@where": { "@id": "?id" },
+};
+
 const Home: NextPage = () => {
-  const allData = useMeld();
+  const allData = useRead(QUERY);
   return allData ? <ReactJson src={allData} /> : <>…</>;
 };
 
