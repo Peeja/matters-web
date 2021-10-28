@@ -1,7 +1,7 @@
 {
   "name": "matters-web",
   "version": "0.1.0",
-  "packageManager": "yarn@3.1.0-rc.2",
+  "packageManager": "yarn@3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
