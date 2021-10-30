@@ -12,10 +12,10 @@ const ReactJson = dynamic(() => import("react-json-view"), {
 // through, without pulling too much data (eg, describing all entities), which
 // currently times out in m-ld.
 const QUERY: Construct = {
-  "@construct": { "@id": "?id", modified: "?modified" },
+  "@construct": { "@id": "?id", name: "?name" },
   "@where": {
     "@id": "?id",
-    "http://peeja.com/purl/matters/omnifocus/o/modified": "?modified",
+    "http://peeja.com/purl/matters/omnifocus/o/name": "?name",
   },
 };
 
