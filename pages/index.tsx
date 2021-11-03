@@ -1,18 +1,23 @@
 import { useRead } from "../hooks/useRead";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
-import { Describe } from "@m-ld/m-ld";
+import { Construct } from "@m-ld/m-ld";
 
 // react-json-view can't load in SSR
 const ReactJson = dynamic(() => import("react-json-view"), {
   ssr: false,
 });
 
+const pattern = {
+  "@id": "?id",
+  "http://peeja.com/purl/matters/omnifocus/o/name": "?name",
+};
+
 // Show all tasks which are incomplete.
-const QUERY: Describe = {
-  "@describe": "?id",
+const QUERY: Construct = {
+  "@construct": pattern,
   "@where": {
-    "@id": "?id",
+    ...pattern,
     "http://peeja.com/purl/matters/omnifocus/o/completed": {
       "@id": "http://peeja.com/purl/matters/omnifocus/o/never",
     },
