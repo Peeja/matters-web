@@ -58,9 +58,15 @@ export const useRead = <R extends Read = Read>(
       // debounceTime() to collect those updates into a single rerender. But
       // until we have a good use case to use to prove the best solution, we'll
       // keep the code simple.
-      statesOfMeldClone(meld).subscribe(async ({ state }) => {
-        setResult(await state.read(query));
-      });
+      const subscription = statesOfMeldClone(meld).subscribe(
+        async ({ state }) => {
+          setResult(await state.read(query));
+        },
+      );
+
+      return () => {
+        subscription.unsubscribe();
+      };
     }
   }, [meld, query]);
 
